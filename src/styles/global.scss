@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+    --color-primary      : #fed100;
+    --color-secondary    : #fed100;
+    --color-primary-hover: #be9d19;
+
+    --black-700: #333333;
+}
+
+html,
+body {
+    height         : 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #FFFFFF;
+}
+
+@media(max-width: 1080px) {
+    html {
+        font-size: 93.75%;
+    }
+}
+
+@media(max-width: 720px) {
+    html {
+        font-size: 85.5%;
+    }
+}
+
+* {
+    margin    : 0;
+    padding   : 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+img {
+    display: block;
+    width  : 100%;
+}
+
+.container {
+    @media(min-width: 1200px) {
+        max-width: 1240px;
+    }
+
+    // @media(min-width: 992px) {
+    //     max-width: 960px;
+    // }
+
+    // @media(min-width: 768px) {
+    //     max-width: 720px;
+    // }
+
+    // @media(min-width: 576px) {
+    //     max-width: 540px;
+    // }
+}
+.nav_hamburguer {
+    height      : 18.5rem;
+    list-style  : none;
+    display     : block;
+    position    : absolute;
+    left        : 0;
+    bottom      : -18.5rem;
+    background  : var(--color-primary);
+    width       : 100%;
+    padding-left: 3rem;
+
+    &.openHeader {
+        display: block;
+    }
+
+    &.closeHeader {
+        display: none;
+    }
+
+    ul {
+
+        li {
+            list-style: none;
+            display   : block;
+
+            a {
+                color          : var(--black-700);
+                font-weight    : 700;
+                text-decoration: none;
+                font-size      : 1rem;
+                text-transform : uppercase;
+            }
+        }
+
+        li+li {
+            margin-top: 25px;
+        }
+    }
+}
+
+.buttonMobile {
+    position        : absolute;
+    left            : 3rem;
+    bottom          : -17.5rem;
+    border          : none;
+    border-radius   : .4rem;
+    outline         : none;
+    padding         : 1rem 1.7rem;
+    background-color: #3483FA;
+
+    @media(max-width: 767px) {
+        width: 90%;
+    }
+
+    &.blockButton {
+        display: block;
+    }
+
+    &.noneButton {
+        display: none;
+    }
+
+    a {
+        color          : #fff;
+        text-decoration: none;
+        font-size      : 1.3rem;
+    }
+}
